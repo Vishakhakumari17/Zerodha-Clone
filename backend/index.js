@@ -193,6 +193,10 @@ app.use(bodyParser.json());
 //     res.send("Done!");
 // });
 
+app.get("/", (req, res) => {
+  res.send("✅ Zerodha Clone Backend is running!");
+});
+
 
 app.get('/allHoldings',async(req, res) =>{
   let allHoldings = await HoldingsModel.find({});
@@ -218,6 +222,18 @@ app.post("/newOrder", async(req, res) =>{
 
   res.send("Order saved!");
 });
+
+
+
+const path = require("path");
+
+// // Serve frontend build
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+});
+
 
 app.listen(PORT, () => {
     console.log("App started!");
