@@ -234,6 +234,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
+pp.get("/", (req, res) => {
+  res.send("Backend is working!");
+});
+
 
 app.listen(PORT, () => {
     console.log("App started!");
