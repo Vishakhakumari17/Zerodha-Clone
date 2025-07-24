@@ -35,6 +35,8 @@ function Navbar() {
                                 <Link className="nav-link active" to="/support">Support</Link>
                             </li>
 
+                            <Link to="/admin" className="nav-link">Admin Panel</Link>
+
                             <li className="nav-item">
                                 <a className="nav-link" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
                             </li>

@@ -43,7 +43,7 @@ const Signup = () => {
           value={formData.username}
           onChange={handleChange}
           required
-        /><br/>
+        /><br/> <br/>
         <input
           type="email"
           name="email"
@@ -51,7 +51,7 @@ const Signup = () => {
           value={formData.email}
           onChange={handleChange}
           required
-        /><br/>
+        /><br/> <br/>
         <input
           type="password"
           name="password"
@@ -59,7 +59,7 @@ const Signup = () => {
           value={formData.password}
           onChange={handleChange}
           required
-        /><br/>
+        /><br/> <br/>
         <button type="submit">Signup</button>
       </form>
       <p>{message}</p>
